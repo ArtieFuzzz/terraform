@@ -10,8 +10,8 @@ variable "provider_region" {
   default = "ap-southeast-2"
 }
 
-variable "key_name" {
- description = "The name of the key to be used to autheticate in SSH"
+variable "key_pair" {
+ description = "The name of the key pair to be used to autheticate in SSH"
  sensitive = false
 }
 

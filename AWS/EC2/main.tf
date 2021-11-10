@@ -7,7 +7,7 @@ resource "aws_instance" "server" {
   ami           = "ami-0bf8b986de7e3c7ce"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ariel-sg.id]
-  key_name = "star1"
+  key_name = var.key_pair
 
   tags = {
     Name = var.instance_name
