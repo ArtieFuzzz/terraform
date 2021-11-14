@@ -31,3 +31,12 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+### Install PowerShell
+#
+# sudo apt-get install -y wget apt-transport-https software-properties-common
+# wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
+# sudo dpkg -i packages-microsoft-prod.deb
+# sudo apt-get update
+# sudo apt-get install -y powershell
+# sudo chsh /usr/bin/pwsh

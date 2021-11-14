@@ -8,6 +8,10 @@ resource "aws_instance" "server" {
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ariel-sg.id]
   key_name = var.key_pair
+  ebs_block_device {
+    device_name = self.resource_name
+    volume_size = var.ebs_volume_size
+  }
 
   tags = {
     Name = var.instance_name

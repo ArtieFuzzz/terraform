@@ -19,3 +19,10 @@ variable "secret_key_name" {
   description = "The name of the secret key to be used in SSH"
   sensitive = false
 }
+
+variable "ebs_volume_size" {
+  description = "The size of the EBS Storage"
+  type = number
+  sensitive = false
+  default = 8
+}
