@@ -4,8 +4,8 @@ provider "aws" {
 }
 
 resource "aws_instance" "server" {
-  ami           = var.ami
-  instance_type = var.instance_type
+  ami           = "ami-0bf8b986de7e3c7ce"
+  instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ec2-sg.id]
   key_name = var.key_pair
   ebs_block_device {

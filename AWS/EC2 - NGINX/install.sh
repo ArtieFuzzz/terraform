@@ -4,6 +4,9 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
+### Install NGINX
+sudo apt-get install nginx -y
+
 ### Update Git
 
 add-apt-repository -y ppa:git-core/ppa
@@ -12,8 +15,8 @@ apt-get upgrade -y
 
 ### Install NodeJS
 
-# curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-# apt install -y nodejs
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+apt install -y nodejs
 
 ### Install Docker
 
@@ -27,10 +30,17 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 
 ### Install Docker Compose
+# https://certbot.eff.org/instructions?ws=nginx&os=ubuntu-20
 
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+### Install Certbot
+
+sudo snap install core; sudo snap refresh core
+sudo snap install --classic certbot
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 ### Install PowerShell
 #

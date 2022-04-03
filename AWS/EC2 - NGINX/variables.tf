@@ -1,18 +1,6 @@
 variable "instance_name" {
   description = "The name of the instance"
   type = string
-  default = "star"
-}
-
-variable "instance_type" {
-  description = "The type of the instance"
-  type = string
-  default = "t2.micro"
-}
-
-variable "ami" {
-  description = "The AMI of the instance"
-  default = "ami-0d382e80be7ffdae5"
 }
 
 variable "provider_region" {
